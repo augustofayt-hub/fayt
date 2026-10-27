@@ -118,6 +118,24 @@ section { padding-block: clamp(64px, 10vw, 140px); }
 .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
 .tag { border: 1px solid var(--black); border-radius: 999px; padding: 6px 14px; font-size: 14px; font-weight: 500; }
 
+/* Campaña: fotos editoriales en columnas, cada una con su proporción */
+.campaign h2 { font-size: clamp(36px, 5.4vw, 80px); color: var(--burgundy); margin-bottom: 18px; }
+.campaign .intro { font-size: clamp(17px, 1.4vw, 20px); max-width: 34em; margin-bottom: 44px; }
+.lookbook { columns: 4 240px; column-gap: 12px; }
+.lookbook figure { margin: 0 0 12px; break-inside: avoid; }
+.lookbook img { display: block; width: 100%; height: auto; }
+
+/* La marca en el mundo: mockups */
+.world { background: var(--grey); }
+.world h2 { font-size: clamp(36px, 5.4vw, 80px); margin-bottom: 48px; }
+.world h3 { font-size: clamp(22px, 2vw, 30px); color: var(--burgundy); margin: 0 0 18px; }
+.mock { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-bottom: 56px; }
+.mock:last-child { margin-bottom: 0; }
+.mock figure { margin: 0; display: grid; gap: 8px; }
+.mock img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+.mock figcaption { font-size: 14px; font-weight: 500; }
+@media (max-width: 860px) { .mock { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
 /* Pie */
 footer { background: var(--burgundy); color: var(--stone); padding-block: 56px 28px; }
 .foot { display: grid; gap: 48px; }
@@ -147,6 +165,7 @@ footer { background: var(--burgundy); color: var(--stone); padding-block: 56px 2
       <a href="#" aria-label="Fayt, inicio"><span class="mark mark-logo" aria-hidden="true"></span></a>
       <ul>
         <li><a href="#historia">Historia</a></li>
+        <li><a href="#campana">Campaña</a></li>
         <li><a href="#drop">Drop 01</a></li>
       </ul>
     </nav>
@@ -172,6 +191,27 @@ footer { background: var(--burgundy); color: var(--stone); padding-block: 56px 2
         <p><strong>Fayt nace en Argentina con la intención de elevar la escena local desde el diseño y la coherencia.</strong></p>
         <p>En un contexto donde muchas propuestas priorizan la tendencia o el volumen, la marca decide construir con intención: cada prenda responde a un concepto, a una estética clara y a un estándar de calidad definido.</p>
         <p>Fayt crece de manera progresiva, cuidando cada lanzamiento y cada punto de contacto. No busca impacto inmediato, sino relevancia sostenida.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="campaign" id="campana" aria-labelledby="t-campana">
+    <div class="wrap">
+      <span class="label">Campaña</span>
+      <h2 id="t-campana">Actitud. Luz. Movimiento.</h2>
+      <p class="intro">La fotografía de Fayt comunica actitud, identidad y dirección: poses seguras, luz que construye el volumen y prendas en movimiento.</p>
+      <div class="lookbook">
+        <figure><img src="assets/fotos/campana-03.jpg" alt="Retrato de espaldas con campera de jean sobre fondo rojo" loading="lazy"></figure>
+        <figure><img src="assets/fotos/campana-01.jpg" alt="Retrato con top estampado y pañuelo sobre fondo azul" loading="lazy"></figure>
+        <figure><img src="assets/fotos/campana-06.jpg" alt="Retrato con campera de cuero roja" loading="lazy"></figure>
+        <figure><img src="assets/fotos/campana-05.jpg" alt="Pose en movimiento con jean ancho y zapatillas" loading="lazy"></figure>
+        <figure><img src="assets/fotos/campana-02.jpg" alt="Paso largo con look negro sobre fondo blanco" loading="lazy"></figure>
+        <figure><img src="assets/fotos/campana-04.jpg" alt="Pose hacia cámara con anillos y look negro" loading="lazy"></figure>
+        <figure><img src="assets/fotos/campana-11.jpg" alt="Dos figuras de negro sobre fondo blanco" loading="lazy"></figure>
+        <figure><img src="assets/fotos/campana-07.jpg" alt="Pose con brazaletes y luz lateral" loading="lazy"></figure>
+        <figure><img src="assets/fotos/campana-09.jpg" alt="Buzo blanco con capucha en movimiento" loading="lazy"></figure>
+        <figure><img src="assets/fotos/campana-08.jpg" alt="Retrato de espaldas con campera verde" loading="lazy"></figure>
+        <figure><img src="assets/fotos/campana-10.jpg" alt="Look negro con anteojos y cinturón" loading="lazy"></figure>
       </div>
     </div>
   </section>
@@ -212,6 +252,31 @@ footer { background: var(--burgundy); color: var(--stone); padding-block: 56px 2
         <li>Cada detalle importa.</li>
         <li>Diseño con intención.</li>
       </ol>
+    </div>
+  </section>
+
+  <section class="world" aria-labelledby="t-mundo">
+    <div class="wrap">
+      <span class="label">Aplicaciones</span>
+      <h2 id="t-mundo">La marca en el mundo.</h2>
+      <h3>En la calle</h3>
+      <div class="mock">
+        <figure><img src="assets/fotos/calle-cartel.jpg" alt="Cartel corpóreo bordó con el logo de Fayt" loading="lazy"><figcaption>Cartel corpóreo</figcaption></figure>
+        <figure><img src="assets/fotos/calle-afiche.jpg" alt="Afiche de campaña en una pared con grafiti" loading="lazy"><figcaption>Afiche de campaña</figcaption></figure>
+        <figure><img src="assets/fotos/calle-colectivo.jpg" alt="Colectivo con el lema Más que una prenda" loading="lazy"><figcaption>Vía pública móvil</figcaption></figure>
+        <figure><img src="assets/fotos/calle-bandera.jpg" alt="Bandera de campaña colgada en una fachada de ladrillo" loading="lazy"><figcaption>Bandera de fachada</figcaption></figure>
+        <figure><img src="assets/fotos/calle-pantalla.jpg" alt="Pantalla en un edificio con el lema Más que una prenda" loading="lazy"><figcaption>Pantalla urbana</figcaption></figure>
+        <figure><img src="assets/fotos/calle-edificio.jpg" alt="Lona de campaña en la esquina de un edificio" loading="lazy"><figcaption>Lona de edificio</figcaption></figure>
+      </div>
+      <h3>Detalles</h3>
+      <div class="mock">
+        <figure><img src="assets/fotos/detalle-colgante.jpg" alt="Etiqueta colgante bordó con el símbolo" loading="lazy"><figcaption>Etiqueta colgante</figcaption></figure>
+        <figure><img src="assets/fotos/detalle-etiqueta-buzo.jpg" alt="Etiqueta tejida con el símbolo en un buzo marrón" loading="lazy"><figcaption>Etiqueta de cuello</figcaption></figure>
+        <figure><img src="assets/fotos/detalle-tarjeta.jpg" alt="Tarjeta personal de Fayt sobre cuero" loading="lazy"><figcaption>Tarjeta personal</figcaption></figure>
+        <figure><img src="assets/fotos/detalle-parche.jpg" alt="Parche con el símbolo sobre fondo negro" loading="lazy"><figcaption>Parche</figcaption></figure>
+        <figure><img src="assets/fotos/detalle-etiqueta-cuidado.jpg" alt="Etiqueta de cuidado: Creamos esta prenda como una obra de arte" loading="lazy"><figcaption>Etiqueta de cuidado</figcaption></figure>
+        <figure><img src="assets/fotos/detalle-bolsa.jpg" alt="Bolsa de papel con el lema Más que una prenda" loading="lazy"><figcaption>Bolsa</figcaption></figure>
+      </div>
     </div>
   </section>
 

@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fayt® | Indumentaria</title>
+<meta name="description" content="Fayt nace en Argentina con la intención de elevar la escena local desde el diseño y la coherencia. Más que una prenda.">
+<meta property="og:title" content="Fayt® | Indumentaria">
+<meta property="og:description" content="Más que una prenda. Moda contemporánea diseñada en Argentina.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#75151E">
+<link rel="icon" href="assets/fayt-symbol.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Owners es la tipografía de titulares del manual (licencia paga). Mientras no estén los archivos web,
+     se usa Archivo expandida como reemplazo. Para activarla, subir los .woff2 a assets/fonts/ (ver @font-face abajo). -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@112..125,700;112..125,800&display=swap">
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&display=swap">
+<style>
+/* Paleta y tipografía según Fayt Brand Guidelines 2026 */
+@font-face {
+  font-family: "Owners";
+  src: url("assets/fonts/Owners-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+:root {
+  --burgundy: #75151E;   /* color insignia, mayor presencia */
+  --stone: #EDEBDD;      /* Warm Stone */
+  --grey: #F2F2F2;       /* Soft Grey */
+  --black: #000000;      /* Core Black */
+  --display: "Owners", "Archivo", "Arial Black", sans-serif;
+  --body: "General Sans", "Helvetica Neue", Arial, sans-serif;
+  --gutter: max(20px, 4vw);
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--stone);
+  color: var(--black);
+  font-family: var(--body);
+  font-size: 17px;
+  line-height: 1.3;          /* cuerpos de texto: 130% */
+  letter-spacing: -0.01em;   /* cuerpos de texto: -10 */
+  text-align: left;          /* alinear siempre a la izquierda */
+}
+.wrap {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: max(var(--gutter), env(safe-area-inset-left, 0px));
+  padding-right: max(var(--gutter), env(safe-area-inset-right, 0px));
+}
+h1, h2, h3 {
+  font-family: var(--display);
+  font-stretch: 118%;
+  font-weight: 800;
+  line-height: 0.9;          /* títulos: 90% */
+  letter-spacing: -0.03em;   /* títulos: -30 */
+  margin: 0;
+  text-wrap: balance;
+}
+p { margin: 0; }
+a { color: inherit; }
+a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+.sub {                       /* sub-títulos: 100%, -20 */
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.meta { font-size: 14px; font-weight: 500; }
+
+/* Marcas: los SVG del manual se pintan con el color del texto */
+.mark { display: block; background: currentColor; -webkit-mask: var(--src) no-repeat left center / contain; mask: var(--src) no-repeat left center / contain; }
+.mark-logo { --src: url("assets/fayt-logo.svg"); aspect-ratio: 389.59 / 93.17; }
+.mark-symbol { --src: url("assets/fayt-symbol.svg"); aspect-ratio: 206.59 / 93.17; }
+.mark-wordmark { --src: url("assets/fayt-wordmark.svg"); aspect-ratio: 138 / 72; }
+
+/* Encabezado */
+.top { background: var(--burgundy); color: var(--stone); }
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 22px; }
+.nav .mark-logo { height: 30px; }
+.nav ul { display: flex; gap: 28px; list-style: none; margin: 0; padding: 0; }
+.nav a { text-decoration: none; font-weight: 500; }
+.nav a:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+/* Portada */
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 32px; padding-block: clamp(72px, 14vw, 180px) 40px; }
+.hero h1 { font-size: clamp(64px, 13vw, 210px); }
+.hero .mark-symbol { height: clamp(48px, 7vw, 110px); }
+.hero-foot { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; border-top: 1px solid rgb(237 235 221 / .35); padding-block: 18px 26px; }
+
+/* Historia */
+section { padding-block: clamp(64px, 10vw, 140px); }
+.label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 28px; }
+.story { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 48px; }
+.story h2 { font-size: clamp(40px, 6vw, 88px); color: var(--burgundy); }
+.story-text { display: grid; gap: 18px; font-size: clamp(18px, 1.6vw, 22px); max-width: 38em; }
+.story-text strong { font-weight: 600; }
+
+/* Valores */
+.values { background: var(--grey); }
+.values h2 { font-size: clamp(36px, 5vw, 72px); margin-bottom: 48px; }
+.grid4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--black); }
+.value { display: grid; gap: 14px; align-content: start; padding: 24px 24px 8px 0; }
+.value + .value { padding-left: 24px; border-left: 1px solid rgb(0 0 0 / .15); }
+.value h3 { font-size: clamp(24px, 2.2vw, 32px); color: var(--burgundy); }
+
+/* Manifiesto */
+.manifesto { background: var(--black); color: var(--stone); }
+.manifesto ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.manifesto li { font-family: var(--display); font-stretch: 118%; font-weight: 800; font-size: clamp(30px, 5.2vw, 76px); line-height: 0.95; letter-spacing: -0.03em; }
+
+/* Drop */
+.drop { display: grid; gap: 40px; }
+.drop h2 { font-size: clamp(30px, 10vw, 150px); color: var(--burgundy); }
+.drop p { font-size: clamp(18px, 1.6vw, 22px); max-width: 30em; }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+.tag { border: 1px solid var(--black); border-radius: 999px; padding: 6px 14px; font-size: 14px; font-weight: 500; }
+
+/* Pie */
+footer { background: var(--burgundy); color: var(--stone); padding-block: 56px 28px; }
+.foot { display: grid; gap: 48px; }
+.foot .mark-wordmark { height: clamp(80px, 16vw, 220px); }
+.foot-row { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 14px; font-weight: 500; }
+
+@media (max-width: 860px) {
+  .story { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .grid4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .value:nth-child(3) { padding-left: 0; border-left: 0; }
+  .value:nth-child(n+3) { border-top: 1px solid rgb(0 0 0 / .15); }
+}
+@media (max-width: 520px) {
+  .nav ul { gap: 18px; }
+  .nav .mark-logo { height: 24px; }
+  .hero { grid-template-columns: minmax(0, 1fr); }
+  .grid4 { grid-template-columns: minmax(0, 1fr); }
+  .value + .value { padding-left: 0; border-left: 0; border-top: 1px solid rgb(0 0 0 / .15); }
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <nav class="nav" aria-label="Principal">
+      <a href="#" aria-label="Fayt, inicio"><span class="mark mark-logo" aria-hidden="true"></span></a>
+      <ul>
+        <li><a href="#historia">Historia</a></li>
+        <li><a href="#drop">Drop 01</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <h1>Más que<br>una prenda.</h1>
+      <span class="mark mark-symbol" aria-hidden="true"></span>
+    </div>
+    <div class="hero-foot meta">
+      <span>Fayt® | Indumentaria</span>
+      <span>Diseñado en Argentina. Pensado para evolucionar.</span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="historia">
+    <div class="wrap story">
+      <div>
+        <span class="label">Historia</span>
+        <h2>Construir con intención.</h2>
+      </div>
+      <div class="story-text">
+        <p><strong>Fayt nace en Argentina con la intención de elevar la escena local desde el diseño y la coherencia.</strong></p>
+        <p>En un contexto donde muchas propuestas priorizan la tendencia o el volumen, la marca decide construir con intención: cada prenda responde a un concepto, a una estética clara y a un estándar de calidad definido.</p>
+        <p>Fayt crece de manera progresiva, cuidando cada lanzamiento y cada punto de contacto. No busca impacto inmediato, sino relevancia sostenida.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="values" aria-labelledby="t-valores">
+    <div class="wrap">
+      <span class="label">Valores</span>
+      <h2 id="t-valores">Lo que sostiene cada prenda.</h2>
+      <div class="grid4">
+        <div class="value">
+          <h3>Identidad</h3>
+          <p>Cada decisión responde a un sistema visual y conceptual claro. La coherencia es parte del diseño.</p>
+        </div>
+        <div class="value">
+          <h3>Autenticidad</h3>
+          <p>La cultura se interpreta, no se copia. Fayt construye desde su propia perspectiva.</p>
+        </div>
+        <div class="value">
+          <h3>Cercanía</h3>
+          <p>La marca se comunica de forma directa y humana, generando vínculo real con su comunidad.</p>
+        </div>
+        <div class="value">
+          <h3>Calidad</h3>
+          <p>Materiales, confección y terminaciones sostienen el posicionamiento de la marca.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="manifesto" aria-label="Manifiesto">
+    <div class="wrap">
+      <span class="label">Manifiesto</span>
+      <ol>
+        <li>No seguimos. Construimos.</li>
+        <li>Primero la visión. Después todo.</li>
+        <li>No es tendencia. Es dirección.</li>
+        <li>El estándar es más alto.</li>
+        <li>Cada detalle importa.</li>
+        <li>Diseño con intención.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="drop">
+    <div class="wrap drop">
+      <div>
+        <span class="label">Drop 01</span>
+        <h2>Próximamente.</h2>
+      </div>
+      <div>
+        <p>Colecciones y drops pensados, priorizando concepto y calidad. Cada lanzamiento se construye con dirección estética definida y atención al detalle.</p>
+        <div class="tags"><span class="tag">Moda contemporánea</span><span class="tag">Diseño argentino</span><span class="tag">Edición limitada</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span class="mark mark-wordmark" aria-label="fayt." role="img"></span>
+    <div class="foot-row">
+      <span>Directa. Segura. Clara.</span>
+      <span>© 2026 Fayt®. Diseñado en Argentina.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
